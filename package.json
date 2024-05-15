@@ -1,15 +1,15 @@
 {
-    "name": "my-node-app",
-    "version": "1.0.0",
-    "description": "A simple Node.js application",
-    "main": "index.js",
-    "scripts": {
-      "start": "node index.js"
-    },
-    "author": "Seu Nome",
-    "license": "ISC",
-    "dependencies": {
-      "express": "^4.17.1"
-    }
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo 'Build script running...' && npm install"
+  },
+  "author": "Seu Nome",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
   }
-  
+}
