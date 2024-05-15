@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "echo 'Build script running...' && npm install"
+    "build": "mkdir -p dist && echo 'Building...' > dist/index.html"
   },
-  "author": "Seu Nome",
+  "author": "Cassio",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
