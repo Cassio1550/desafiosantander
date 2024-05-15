@@ -24,11 +24,14 @@ jobs:
       - name: Build application
         run: npm run build
 
+      - name: List build directory for debug
+        run: ls -la build 
+
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: application-build
-          path: build # 
+          path: build 
 
   deploy:
     needs: build_and_test
@@ -38,11 +41,15 @@ jobs:
       url: ${{ steps.deploy.outputs.deployment-url }}
     steps:
       - uses: actions/checkout@v2
+
       - name: Download build artifacts
         uses: actions/download-artifact@v2
         with:
           name: application-build
           path: build # O mesmo caminho usado para upload
+
+      - name: List downloaded build directory for debug
+        run: ls -la build 
 
       - name: Deploy to testing environment
         run: ./deploy-script.sh 
