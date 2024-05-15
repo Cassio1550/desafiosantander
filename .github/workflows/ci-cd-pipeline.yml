@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - mmaster
+      - master
 
 jobs:
   build_and_test:
